@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Portfolio d'Ilhame Haddadi — Operations & Business Development Manager, industrie portuaire, Casablanca.">
+<style>html{color-scheme:light}body{margin:0;font-family:system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Ilhame Haddadi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Layout: a single quay-line rail runs down the left of the content column;
+   sections hang off it like berths, each marked by a brass tick. */
+:root{
+  --bg:#f2f5f6;
+  --surface:#ffffff;
+  --surface-2:#e9eef0;
+  --ink:#0f1d28;
+  --ink-2:#2b3f4d;
+  --muted:#5f7484;
+  --line:#d6dee2;
+  --brass:#9a6f26;
+  --brass-2:#c8a45e;
+  --brass-wash:#f0e9da;
+  --shadow:0 1px 2px rgba(15,29,40,.05),0 8px 28px rgba(15,29,40,.06);
+  --font-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#08121a;
+    --surface:#0e1c26;
+    --surface-2:#132531;
+    --ink:#e6eef3;
+    --ink-2:#c2d2dc;
+    --muted:#8ba1b0;
+    --line:#1d3241;
+    --brass:#d7ab5f;
+    --brass-2:#a8823c;
+    --brass-wash:#17242b;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08121a;
+  --surface:#0e1c26;
+  --surface-2:#132531;
+  --ink:#e6eef3;
+  --ink-2:#c2d2dc;
+  --muted:#8ba1b0;
+  --line:#1d3241;
+  --brass:#d7ab5f;
+  --brass-2:#a8823c;
+  --brass-wash:#17242b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px}
+h1,h2,h3,h4,.ui{font-family:var(--font-display)}
+h2,h3{text-wrap:balance}
+a{color:inherit}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:11px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:13.5px;letter-spacing:.16em;text-transform:uppercase}
+.brand em{font-style:normal;color:var(--brass)}
+nav.links{display:flex;gap:20px;flex-wrap:wrap}
+nav.links a{
+  font-family:var(--font-display);font-size:12.5px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  padding-bottom:2px;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;
+}
+nav.links a:hover,nav.links a:focus-visible{color:var(--ink);border-bottom-color:var(--brass)}
+@media(max-width:700px){nav.links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:64px 52px;position:relative;z-index:2}
+.eyebrow{
+  font-family:var(--font-display);font-size:11.5px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--brass);margin:0 0 20px;
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:34px;height:1.5px;background:var(--brass);display:block}
+h1{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(40px,8vw,74px);line-height:1.02;letter-spacing:-.025em;
+  margin:0 0 6px;
+}
+.role{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(15px,2.4vw,20px);letter-spacing:.055em;text-transform:uppercase;
+  color:var(--ink-2);margin:0 0 26px;
+}
+.lede{font-size:clamp(18px,2.4vw,21px);line-height:1.6;max-width:33em;color:var(--ink-2);margin:0 0 30px}
+.lede strong{font-weight:500;color:var(--ink);box-shadow:inset 0 -.42em 0 var(--brass-wash)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 10px;font-family:var(--font-display);font-size:12.5px}
+.tag{
+  border:1px solid var(--line);background:var(--surface);border-radius:2px;
+  padding:5px 11px;color:var(--ink-2);letter-spacing:.03em;
+}
+.tag b{color:var(--brass);font-weight:600}
+.crane{position:absolute;right:-30px;bottom:0;width:min(46%,470px);opacity:.14;pointer-events:none;z-index:1}
+@media(max-width:820px){.crane{width:74%;right:-50px;opacity:.07}}
+
+/* ---------- kpi ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.kpi{background:var(--bg);padding:26px 22px}
+.kpi .n{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3.6vw,33px);letter-spacing:-.02em;line-height:1.05;color:var(--ink);font-variant-numeric:tabular-nums}
+.kpi .n span{color:var(--brass)}
+.kpi .l{font-size:14.5px;line-height:1.45;color:var(--muted);margin-top:8px}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:380px){.kpis{grid-template-columns:1fr}}
+
+/* ---------- sections ---------- */
+section{padding-block:60px}
+section+section{border-top:1px solid var(--line)}
+.shead{margin:0 0 34px}
+.shead .num{
+  font-family:var(--font-display);font-size:11.5px;font-weight:600;letter-spacing:.2em;
+  color:var(--brass);text-transform:uppercase;display:block;margin-bottom:9px;
+}
+h2{font-family:var(--font-display);font-weight:600;font-size:clamp(25px,3.7vw,34px);letter-spacing:-.02em;margin:0;line-height:1.15}
+.sintro{font-size:18px;color:var(--muted);max-width:32em;margin:12px 0 0}
+
+/* ---------- expertise ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:840px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-top:2.5px solid var(--brass);padding:26px 24px;box-shadow:var(--shadow);min-width:0}
+.card h3{font-size:19px;font-weight:600;letter-spacing:-.005em;margin:0 0 10px;line-height:1.25}
+.card p{margin:0 0 14px;font-size:16px;color:var(--ink-2);line-height:1.6}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.card li{font-family:var(--font-display);font-size:13.5px;color:var(--muted);padding-left:15px;position:relative;line-height:1.45}
+.card li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:1.5px;background:var(--brass)}
+
+/* ---------- case studies ---------- */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:840px){.cases{grid-template-columns:1fr}}
+.case{background:var(--surface);border:1px solid var(--line);padding:26px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;min-width:0}
+.case .ctx{font-family:var(--font-display);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.case .ctx b{color:var(--brass);font-weight:600}
+.case .headline{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,3vw,28px);line-height:1.12;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.case p{margin:0;font-size:16px;color:var(--ink-2);line-height:1.6}
+.case .how{border-top:1px solid var(--line);padding-top:12px;margin-top:auto;font-family:var(--font-display);font-size:13px;color:var(--muted);line-height:1.5}
+.case .how b{color:var(--ink-2);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:4px}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;padding-left:30px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-29px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--brass)}
+.tl-item.minor::before{border-color:var(--line);width:9px;height:9px;left:-28px;top:9px}
+.tl-date{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--brass);margin-bottom:4px}
+.tl-item.minor .tl-date{color:var(--muted)}
+.tl-role{font-family:var(--font-display);font-size:19px;font-weight:600;line-height:1.25;margin:0 0 2px;letter-spacing:-.005em}
+.tl-item.minor .tl-role{font-size:16.5px}
+.tl-org{font-family:var(--font-display);font-size:13px;letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+.tl-org b{color:var(--ink-2);font-weight:600}
+.tl-body{font-size:16px;color:var(--ink-2);margin:0;line-height:1.6;max-width:44em}
+
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
+@media(max-width:760px){.skills{grid-template-columns:1fr}}
+.skillblock h3{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-family:var(--font-display);font-size:13px;border:1px solid var(--line);background:var(--surface);padding:5px 11px;border-radius:2px;color:var(--ink-2)}
+.langlist{display:flex;flex-direction:column;gap:9px}
+.lang{display:flex;align-items:baseline;gap:12px}
+.lang .nm{font-family:var(--font-display);font-size:15px;font-weight:600;min-width:80px}
+.lang .bar{flex:1;height:3px;background:var(--surface-2);position:relative;min-width:60px}
+.lang .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--brass);display:block}
+.lang .lv{font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:.04em;white-space:nowrap}
+
+/* ---------- education ---------- */
+.edus{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.edus{grid-template-columns:1fr}}
+.edu{border-left:2.5px solid var(--brass);padding:4px 0 4px 18px}
+.edu .d{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.11em;color:var(--brass);text-transform:uppercase}
+.edu h3{font-family:var(--font-display);font-size:18px;font-weight:600;margin:4px 0 3px;line-height:1.3}
+.edu .sch{font-size:15.5px;color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:34px 30px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
+@media(max-width:760px){.contact{grid-template-columns:1fr;padding:26px 22px}}
+.contact h2{margin-bottom:8px}
+.contact p{margin:0;color:var(--muted);font-size:17px;max-width:30em}
+.cfields{display:flex;flex-direction:column;gap:10px;min-width:0}
+.cf{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--bg);padding:9px 12px;min-width:0}
+.cf .k{font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);width:56px;flex:0 0 auto}
+.cf .v{font-family:var(--font-display);font-size:14.5px;color:var(--ink);user-select:all;overflow-wrap:anywhere;min-width:0;flex:1}
+.cf button{
+  font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  padding:5px 9px;cursor:pointer;flex:0 0 auto;transition:color .18s,border-color .18s;
+}
+.cf button:hover,.cf button:focus-visible{color:var(--brass);border-color:var(--brass)}
+footer{border-top:1px solid var(--line);padding-block:26px;font-family:var(--font-display);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Ilhame <em>Haddadi</em></div>
+    <nav class="links">
+      <a href="#expertise">Expertise</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <svg class="crane" viewBox="0 0 520 320" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+    <path d="M18 268h484"/>
+    <path d="M40 268V104h132v164"/>
+    <path d="M62 268V126M150 268V126"/>
+    <path d="M40 104h330"/>
+    <path d="M370 104 502 66"/>
+    <path d="M40 104 6 116"/>
+    <path d="M106 104V40h180l-180 64"/>
+    <path d="M286 40 106 40"/>
+    <path d="M232 104v34h44v-34"/>
+    <path d="M254 138v52"/>
+    <path d="M226 190h56v30h-56z"/>
+    <path d="M330 240h58v28h-58zM394 240h58v28h-58zM330 212h58v28h-58z"/>
+    <path d="M40 268h132" stroke-width="4"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Casablanca, Maroc — Mobilité internationale</p>
+    <h1>Ilhame Haddadi</h1>
+    <p class="role">Operations &amp; Business Development Manager</p>
+    <p class="lede">Neuf ans à faire avancer des projets lourds dans l'<strong>industrie portuaire</strong> : monter les appels d'offres qui se gagnent, tenir les délais de livraison d'un réseau de distribution, et construire les processus qui manquaient.</p>
+    <div class="meta">
+      <span class="tag"><b>Appels d'offres</b> &amp; marchés publics</span>
+      <span class="tag"><b>Supply chain</b> &amp; distribution</span>
+      <span class="tag"><b>Équipements portuaires</b> lourds</span>
+      <span class="tag">AR · FR · EN</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">+7 <span>M USD</span></div><div class="l">de contrats internationaux remportés sur appels d'offres</div></div>
+  <div class="kpi"><div class="n">4</div><div class="l">accords de distribution négociés et signés</div></div>
+  <div class="kpi"><div class="n">N<span>°</span> 1</div><div class="l">sur les délais de livraison du réseau de distribution</div></div>
+  <div class="kpi"><div class="n">5</div><div class="l">langues parlées, dont 3 en contexte professionnel</div></div>
+</div>
+
+<div class="wrap">
+
+<section id="expertise">
+  <div class="shead">
+    <span class="num">Ce que je fais</span>
+    <h2>Trois métiers qui se répondent</h2>
+    <p class="sintro">Gagner l'affaire, la livrer dans les délais, et faire en sorte que le client revienne. Dans l'équipement portuaire, les trois sont indissociables.</p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <h3>Appels d'offres &amp; marchés publics</h3>
+      <p>Je pilote les volets technique et commercial des consultations, de la lecture du cahier des charges jusqu'au suivi post-soumission.</p>
+      <ul>
+        <li>Réglementation administrative et financière marocaine</li>
+        <li>Montage et revue critique des dossiers</li>
+        <li>Mise en conformité et détection des incohérences</li>
+        <li>Suivi post-soumission et négociation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Opérations &amp; supply chain</h3>
+      <p>Du bon de commande à la réception définitive : je tiens les délais, je réduis les temps de transit et je rends le suivi lisible pour le client.</p>
+      <ul>
+        <li>Processus commande — livraison</li>
+        <li>Pilotage du transport et des coûts</li>
+        <li>Suivi des KPI et amélioration continue</li>
+        <li>Prévisions de demande et reporting fournisseurs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Développement &amp; partenariats</h3>
+      <p>Identifier les opportunités, aller chercher les bons partenaires et transformer une piste en accord signé, puis en activité récurrente.</p>
+      <ul>
+        <li>Veille marché et opportunités</li>
+        <li>Négociation d'accords de distribution</li>
+        <li>Réseau : salons, clients, fournisseurs</li>
+        <li>Structuration de l'activité naissante</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="realisations">
+  <div class="shead">
+    <span class="num">Réalisations</span>
+    <h2>Ce que ça a donné</h2>
+    <p class="sintro">Quatre dossiers représentatifs, conduits chez EQSECO et sur des projets spéciaux en industrie portuaire.</p>
+  </div>
+  <div class="cases">
+
+    <article class="case">
+      <div class="ctx"><b>EQSECO</b> · 2019 — 2024 · Conseil</div>
+      <p class="headline">Plus de 7 M USD de contrats d'équipements portuaires remportés</p>
+      <p>Pilotage de bout en bout des consultations techniques et commerciales pour la fourniture et la relocalisation d'équipements portuaires, sur des marchés internationaux fortement concurrentiels.</p>
+      <div class="how"><b>Comment</b>Lecture réglementaire des marchés publics, construction du dossier avec le client, chasse aux incohérences avant dépôt, puis suivi jusqu'à l'attribution.</div>
+    </article>
+
+    <article class="case">
+      <div class="ctx"><b>EQSECO</b> · 2019 — 2024 · Distribution</div>
+      <p class="headline">Première du réseau sur les délais de livraison</p>
+      <p>Direction du traitement des commandes de pièces de rechange et des opérations de distribution, jusqu'à faire de l'entreprise la meilleure performance du réseau sur les délais.</p>
+      <div class="how"><b>Comment</b>Réorganisation du flux réception — traitement — expédition, suivi serré du transport pour réduire les temps de transit et les coûts, KPI revus en continu.</div>
+    </article>
+
+    <article class="case">
+      <div class="ctx"><b>EQSECO</b> · 2017 — 2019 · Développement</div>
+      <p class="headline">Quatre accords de distribution signés, et l'entreprise structurée</p>
+      <p>Construction du cadre opérationnel de l'entreprise — devis, facturation, traitement des commandes, gestion des livraisons — en parallèle du développement commercial.</p>
+      <div class="how"><b>Comment</b>Veille marché et présence sur les salons du secteur, identification des partenaires, négociation des contrats fournisseurs, mesure et ajustement continu de la stratégie.</div>
+    </article>
+
+    <article class="case">
+      <div class="ctx"><b>NOVOTECH</b> · 2021 — 2022 · Projet spécial</div>
+      <p class="headline">Maintenance des portiques de quai, projet ZPMC</p>
+      <p>Supervision des équipes de maintenance sur portiques ship-to-shore, coordination des prestataires et fournisseurs externes, et plans de contingence pour les interventions d'urgence.</p>
+      <div class="how"><b>Comment</b>Encadrement terrain, registres de maintenance et de stock tenus à jour, procédures d'urgence écrites avant d'en avoir besoin.</div>
+    </article>
+
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="shead">
+    <span class="num">Parcours</span>
+    <h2>Neuf ans, un secteur</h2>
+  </div>
+  <div class="tl">
+
+    <div class="tl-item">
+      <div class="tl-date">Janvier 2025 — Aujourd'hui</div>
+      <p class="tl-role">Operations Manager — Freelance, à distance</p>
+      <div class="tl-org"><b>EQSECO</b> · Casablanca</div>
+      <p class="tl-body">Pilotage de l'avancement des projets et des commandes clients, respect des délais et des standards de qualité, détection en amont des blocages opérationnels, suivi documenté des jalons et livrables.</p>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Novembre 2019 — Novembre 2024</div>
+      <p class="tl-role">Responsable Projets &amp; Conseil · Responsable Distribution pièces de rechange</p>
+      <div class="tl-org"><b>EQSECO</b> · Casablanca</div>
+      <p class="tl-body">Deux activités menées de front : le conseil en fourniture et relocalisation d'équipements portuaires, avec les appels d'offres internationaux associés, et la distribution de pièces de rechange, de la commande à la livraison.</p>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Février 2017 — Octobre 2019</div>
+      <p class="tl-role">Responsable du Développement</p>
+      <div class="tl-org"><b>EQSECO</b> · Casablanca</div>
+      <p class="tl-body">Développement commercial et création du cadre opérationnel de l'entreprise : processus de devis, facturation, traitement des commandes et gestion des livraisons.</p>
+    </div>
+
+    <div class="tl-item minor">
+      <div class="tl-date">Septembre 2021 — Juin 2022</div>
+      <p class="tl-role">Superviseure Maintenance — projet ZPMC</p>
+      <div class="tl-org"><b>NOVOTECH</b> · Casablanca</div>
+      <p class="tl-body">Portiques de quai ship-to-shore : encadrement des équipes, coordination des prestataires, registres et plans de contingence.</p>
+    </div>
+
+    <div class="tl-item minor">
+      <div class="tl-date">Septembre — Novembre 2020</div>
+      <p class="tl-role">Consultante — projet DAMEN Shipyard</p>
+      <div class="tl-org"><b>SEATECH</b> · Casablanca</div>
+      <p class="tl-body">Analyse et évaluation de marché, préparation et revue des dossiers d'appel d'offres.</p>
+    </div>
+
+    <div class="tl-item minor">
+      <div class="tl-date">Avril 2017 — Mars 2019</div>
+      <p class="tl-role">Consultante — fourniture de tracteurs portuaires MAFI</p>
+      <div class="tl-org"><b>NOVOTECH</b> · Casablanca</div>
+      <p class="tl-body">Préparation et revue des offres, suivi et coordination de l'exécution jusqu'à la réception définitive.</p>
+    </div>
+
+    <div class="tl-item minor">
+      <div class="tl-date">Avril — Décembre 2016</div>
+      <p class="tl-role">Conseillère clientèle — assistance technique Orange France</p>
+      <div class="tl-org"><b>PHONE GROUP</b> · Marrakech</div>
+      <p class="tl-body">Diagnostic et résolution d'incidents téléphonie et internet, accompagnement des clients dans l'usage des services.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="competences">
+  <div class="shead">
+    <span class="num">Compétences</span>
+    <h2>Outils de travail</h2>
+  </div>
+  <div class="skills">
+    <div class="skillblock">
+      <h3>Pilotage &amp; opérations</h3>
+      <div class="chips">
+        <span class="chip">Gestion de projet</span><span class="chip">Processus commande — livraison</span>
+        <span class="chip">Suivi des KPI</span><span class="chip">Amélioration continue</span>
+        <span class="chip">Gestion des délais</span><span class="chip">Coordination prestataires</span>
+      </div>
+    </div>
+    <div class="skillblock">
+      <h3>Commercial &amp; appels d'offres</h3>
+      <div class="chips">
+        <span class="chip">Montage de dossiers</span><span class="chip">Conformité marchés publics</span>
+        <span class="chip">Négociation contractuelle</span><span class="chip">Partenariats &amp; distribution</span>
+        <span class="chip">Développement de réseau</span>
+      </div>
+    </div>
+    <div class="skillblock">
+      <h3>Analyse &amp; relation client</h3>
+      <div class="chips">
+        <span class="chip">Analyse de données</span><span class="chip">Prévisions de demande</span>
+        <span class="chip">Reporting</span><span class="chip">Service client</span>
+        <span class="chip">Résolution de conflits</span><span class="chip">Traduction EN — FR</span>
+      </div>
+    </div>
+    <div class="skillblock">
+      <h3>Langues</h3>
+      <div class="langlist">
+        <div class="lang"><span class="nm">Arabe</span><span class="bar"><i style="width:100%"></i></span><span class="lv">Maternelle</span></div>
+        <div class="lang"><span class="nm">Français</span><span class="bar"><i style="width:92%"></i></span><span class="lv">Courant</span></div>
+        <div class="lang"><span class="nm">Anglais</span><span class="bar"><i style="width:88%"></i></span><span class="lv">Courant</span></div>
+        <div class="lang"><span class="nm">Espagnol</span><span class="bar"><i style="width:22%"></i></span><span class="lv">Notions · A1</span></div>
+        <div class="lang"><span class="nm">Turc</span><span class="bar"><i style="width:22%"></i></span><span class="lv">Notions · A1</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formation">
+  <div class="shead">
+    <span class="num">Formation</span>
+    <h2>Ingénierie informatique</h2>
+    <p class="sintro">Une formation technique qui sert tous les jours : lecture des données, structuration des processus, dialogue avec les équipes techniques.</p>
+  </div>
+  <div class="edus">
+    <div class="edu">
+      <div class="d">2015 — 2016</div>
+      <h3>Master — Génie logiciel &amp; développement web</h3>
+      <div class="sch">Institut Supérieur du Génie Appliqué (ISGA) · Marrakech</div>
+    </div>
+    <div class="edu">
+      <div class="d">2012 — 2015</div>
+      <h3>Licence — Ingénierie des systèmes informatiques</h3>
+      <div class="sch">Institut Supérieur du Génie Appliqué (ISGA) · Marrakech</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div>
+      <h2>Parlons de votre projet</h2>
+      <p>Disponible pour des missions en opérations, appels d'offres et développement commercial — à Casablanca, ailleurs au Maroc ou à l'international. Le CV complet est envoyé sur demande.</p>
+    </div>
+    <div class="cfields">
+      <div class="cf"><span class="k">Email</span><span class="v" id="v-mail">ilhamehaddadi22@gmail.com</span><button type="button" data-copy="v-mail">Copier</button></div>
+      <div class="cf"><span class="k">Tél.</span><span class="v" id="v-tel">+212 (0) 600 112 736</span><button type="button" data-copy="v-tel">Copier</button></div>
+      <div class="cf"><span class="k">Basée à</span><span class="v">Casablanca, Maroc</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Ilhame Haddadi — Operations &amp; Business Development Manager</span>
+  <span>Casablanca · Mobilité nationale &amp; internationale</span>
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll("button[data-copy]").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var el = document.getElementById(btn.getAttribute("data-copy"));
+    if(!el) return;
+    var txt = el.textContent.trim();
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = "Copié";
+      setTimeout(function(){ btn.textContent = old; }, 1600);
+    };
+    var fallback = function(){
+      try{
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = "Sélectionné";
+        setTimeout(function(){ btn.textContent = "Copier"; }, 1800);
+      }catch(e){}
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(fallback);
+    } else { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>
